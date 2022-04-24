@@ -11,6 +11,7 @@ library(lubridate)
 ```
 
 ```{r get data}
+# test again
 lpz_loc = c(41.921, -87.634)
 metadata_binary = GET(paste0("https://api.weather.gov/points/", lpz_loc[1], ",", lpz_loc[2]))
 metadata_json = jsonlite::fromJSON(content(metadata_binary, as="text"))
