@@ -4,7 +4,7 @@ on:
   push:
     paths: ['chicago_weather.Rmd']
   schedule:
-    - cron: '15 * * * *'
+    - cron: '0 0 * * *'
 
 name: Render Index
 
