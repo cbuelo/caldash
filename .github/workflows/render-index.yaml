@@ -4,7 +4,7 @@ on:
   push:
     paths: ['chicago_weather.Rmd']
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 * * * *'
 
 name: Render Index
 
@@ -36,8 +36,8 @@ jobs:
 
       - name: Commit results
         run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config --local user.name "cbuelo_github_actions"
+          git config --local user.email "cbuelo_github_actions@users.noreply.github.com"
           git add index.html
           git commit -m 'pushing updated files' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
